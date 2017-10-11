@@ -12,8 +12,15 @@
 ## Architecture
 
 ### Technology stack
-* Frontend stack: J2EE Servelet, JSP, CSS
-* Backend stack: Spring Boot, Rabbit MQ (or other AMQP), MySQL (or other RDBMS), MongoDB (or other NoSQL) and Redis.
+* Frontend stack: J2EE Servelet, JSP, Bootstrap
+* Backend stack: Spring Boot, Spring Cloud, Spring Data, Rabbit MQ (or other AMQP), MySQL (or other RDBMS), MongoDB (or other NoSQL), Docker, and Redis.
+
+- Spring Boot will be serve as stand-alone REST microservice.
+- Spring Cloud will be used for registration and discovery for REST microservices.
+- Spring Data will replace traditional ORM to serve as lightweight database access layer.
+- Redis serve as a cache layer for popular data in RDBMS to provide quick access to restaurant listing and menu items listing.
+- All microservices, databases, cache store and spring cloud intance will be dockerized.
+
 
 ### Architecture diagram
 ![diagram](https://github.com/benjasy1993/DeliveryApp/blob/master/images/diagram.jpg "Architecture Diagram")
