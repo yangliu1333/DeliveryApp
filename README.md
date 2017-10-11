@@ -16,7 +16,7 @@
 * Backend stack: Spring Boot, Rabbit MQ (or other AMQP), MySQL (or other RDBMS), MongoDB (or other NoSQL) and Redis.
 
 ### Architecture diagram
-![diagram](https://github.com/benjasy1993/DeliveryApp/images/diagram.jpg "Architecture Diagram")
+![diagram](https://github.com/benjasy1993/DeliveryApp/blob/master/images/diagram.jpg "Architecture Diagram")
 
 
 ## Members
