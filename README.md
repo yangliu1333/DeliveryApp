@@ -39,6 +39,9 @@
 * [Bootstrap templates](https://startbootstrap.com/template-categories/all/)
 * [Spring Boot tutorial](https://spring.io/guides/gs/spring-boot/)
 * [Dependency management tutorial](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)
+* [Build web application with Spring Boot](http://www.springboottutorial.com/creating-web-application-with-spring-boot)
+* [Write integration tests for Spring Boot application](http://www.springboottutorial.com/integration-testing-for-spring-boot-rest-services)
+* [Spring Security](http://www.baeldung.com/security-spring)
 
 ## How to create your own microservice
 ### Option 1

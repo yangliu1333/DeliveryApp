@@ -1,4 +1,5 @@
+spring-delivery-app/web-app/target/
 spring-delivery-app/.idea/
 spring-delivery-app/*.iml
 spring-delivery-app/content-service/*.iml
-spring-delivery-app/content-service/.idea/
+spring-delivery-app/web-app/*.iml
