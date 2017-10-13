@@ -1,4 +1,9 @@
-# Delivery Web App Design Doc
+# Delivery Web App
+
+## How to run web interface
+* install maven that suits your platform
+* `cd DeliveryApp/spring-delivery-app/web-app`
+* `mvn clean spring-boot:run`
 
 ## Functionality
 * Main dashboard can show restaurants and menu.
@@ -29,7 +34,7 @@
 
 ## Members
 
-* Yinong Wu (front-end)
+* Zhiyuan Zhang (front-end)
 * Leo Liu (back-end)
 * Young Liu (back-end)
 * Shaoqian Yang (back-end)
