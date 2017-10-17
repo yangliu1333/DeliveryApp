@@ -10,9 +10,26 @@
 * User log-in and sign-up (through third party accounts).
 * User can manage their orders: place order, cancel order, see order detail.
 * User can track his/her order in real time (location update in real time).
-* Optional: User can add each other as friend. In friends dashboard, they can see their friends' update and comment on these posts.
-* Optional: User can order together with friend, support split payment and order sharing.
-* Optional: User can comment on the order and share the post to the friends dashboard.
+* User can add each other as friend. In friends dashboard, they can see their friends' update and comment on these posts.
+* User can order together with friend, support split payment and order sharing.
+* User can comment on the order and share the post to the friends dashboard.
+
+## Functionality (updated)
+
+#### Restaurant:
+* Keep track of ordered meals, available meals, and meals got picked up.
+* Update menus and meal options.
+* Update location, expected arriving time, and expected leaving time.
+* Send notice to designated user groups.
+* Offer customer loyalty programs.
+
+#### User:
+* Save user preference for quick ordering.
+* Manage orders.
+* See additional meals that can be picked up without previous reservation.
+* Allow pickup for others.
+* Make payments through third-party application.
+
 
 ## Architecture
 
@@ -20,7 +37,7 @@
 * Frontend stack: J2EE Servelet, JSP, Bootstrap
 * Backend stack: Spring Boot, Spring Cloud, Spring Data, Rabbit MQ (or other AMQP), MySQL (or other RDBMS), MongoDB (or other NoSQL), Docker, and Redis.
 
-- Spring Boot will be serve as stand-alone REST microservice.
+- Spring Boot will be served as stand-alone REST microservice.
 - Spring Cloud will be used for registration and discovery for REST microservices.
 - Spring Data will replace traditional ORM to serve as lightweight database access layer.
 - Redis serve as a cache layer for popular data in RDBMS to provide quick access to restaurant listing and menu items listing.
