@@ -6,29 +6,22 @@
 * `mvn clean spring-boot:run`
 
 ## Functionality
-* Main dashboard can show restaurants and menu.
-* User log-in and sign-up (through third party accounts).
-* User can manage their orders: place order, cancel order, see order detail.
-* User can track his/her order in real time (location update in real time).
-* User can add each other as friend. In friends dashboard, they can see their friends' update and comment on these posts.
-* User can order together with friend, support split payment and order sharing.
-* User can comment on the order and share the post to the friends dashboard.
-
-## Functionality (updated)
-
-#### Restaurant:
-* Keep track of ordered meals, available meals, and meals got picked up.
-* Update menus and meal options.
-* Update location, expected arriving time, and expected leaving time.
-* Send notice to designated user groups.
-* Offer customer loyalty programs.
 
 #### User:
-* Save user preference for quick ordering.
-* Manage orders.
-* See additional meals that can be picked up without previous reservation.
-* Allow pickup for others.
-* Make payments through third-party application.
+* Place orders: users can see the menus posted by restaurants and order meals. 
+* Manage orders: users can cancel orders or change quantities （based on availability）. 
+* Track delivery status: users can track the time when driver leaves for campus, the estimated arrival time, length of stay, and leaving time.
+* See amount of extra meals: users can check the amount of extra meals prepared by restaurants that were not picked-up.
+* Reputation rating system: to prevent the abuse of the system, only users with a qualified reputation level can place orders (pending).
+
+#### Restaurant:
+* Post daily menus: restaurants can post and update the dishes offered on a given day and the amount of meals offered.
+* Take orders: restaurants can keep track of the total amount of orders placed, cancelled, and picked up.
+* Update activities: restaurants can post the location information, expected arriving time, and expected leaving time.
+* Pickup verification: delivery personnel will scan the QR code of users picking up the meals and verify order information.
+* Track extra meals: when extra meals were picked up, the amount of extra meals prepared will be reduced. The delivery personnel will be alerted when no extra meals were available for users haven't ordered.
+
+
 
 
 ## Architecture
