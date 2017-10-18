@@ -1,0 +1,10 @@
+server:
+  port: 8888
+spring:
+  profiles:
+    active: native
+  cloud:
+    application.config:
+      server:
+        native:
+          search-locations: file:///Users/macbookretina14/workspace/DeliveryApp/spring-delivery-app/config-service/src/main/resources/config-service

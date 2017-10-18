@@ -1,5 +1,14 @@
+spring-delivery-app/auth-service/*.iml
+spring-delivery-app/auth-service/target
+spring-delivery-app/config-service/*.iml
+spring-delivery-app/config-service/target
+spring-delivery-app/menu-service/*.iml
+spring-delivery-app/menu-service/target
+spring-delivery-app/restaurants-service/*.iml
+spring-delivery-app/eureka-server/*.iml
+spring-delivery-app/eureka-server/target
+spring-delivery-app/restaurants-service/target
 spring-delivery-app/web-app/target/
 spring-delivery-app/.idea/
 spring-delivery-app/*.iml
-spring-delivery-app/content-service/*.iml
 spring-delivery-app/web-app/*.iml

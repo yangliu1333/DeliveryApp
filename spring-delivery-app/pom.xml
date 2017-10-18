@@ -8,8 +8,12 @@
     <artifactId>spring-delivery-app</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>content-service</module>
+        <module>auth-service</module>
         <module>web-app</module>
+        <module>config-service</module>
+        <module>eureka-server</module>
+        <module>restaurants-service</module>
+        <module>menu-service</module>
     </modules>
     <packaging>pom</packaging>
     <name>Spring Delivery App</name>
@@ -18,7 +22,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.4.1.RELEASE</version>
+        <version>1.4.4.RELEASE</version>
     </parent>
 
     <properties>
@@ -27,17 +31,24 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--<dependency>-->
+                <!--<groupId>org.springframework.cloud</groupId>-->
+                <!--<artifactId>spring-cloud-starter-parent</artifactId>-->
+                <!--<version>Brixton.M2</version>-->
+                <!--<type>pom</type>-->
+                <!--<scope>import</scope>-->
+            <!--</dependency>-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-parent</artifactId>
-                <version>Brixton.M2</version>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Camden.SR5</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-parent</artifactId>
-                <version>1.3.0.RELEASE</version>
+                <version>1.4.4.RELEASE</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.security</groupId>
@@ -46,7 +57,7 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework.security</groupId>
-                <artifactId>spring-security-config</artifactId>
+                <artifactId>spring-security-application.config</artifactId>
                 <version>4.2.3.RELEASE</version>
             </dependency>
         </dependencies>
