@@ -7,6 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MenuServiceImpl implements MenuService {
 
@@ -19,8 +21,13 @@ public class MenuServiceImpl implements MenuService {
     }
 
     @Override
+    public void saveMenus(List<Menu> menus) {
+        repository.save(menus);
+    }
+
+    @Override
     public Menu getLatestMenu(Long restaurantId) {
-        return repository.findDistinctByRestaurantIdOrderByDateAscTimeOfDayAsc(restaurantId);
+        return repository.findTopByRestaurantIdOrderByTimeOfDayDesc(restaurantId);
     }
 
     @Override

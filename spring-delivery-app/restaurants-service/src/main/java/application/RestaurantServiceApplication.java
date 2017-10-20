@@ -8,10 +8,10 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class RestaurantServiceApplication {
 
-    @Bean
-    public RestTemplate getRestTemplate() {
-        return new RestTemplate();
-    }
+//    @Bean
+//    public RestTemplate getRestTemplate() {
+//        return new RestTemplate();
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(RestaurantServiceApplication.class, args);

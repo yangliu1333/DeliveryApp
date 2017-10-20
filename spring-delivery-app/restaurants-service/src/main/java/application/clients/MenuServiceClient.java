@@ -13,13 +13,13 @@ public class MenuServiceClient {
     @Autowired
     private RestTemplate restTemplate;
 
-    public Menu getMenu(String menuId) {
+    public Menu getLatestMenu(Long restaurantId) {
         ResponseEntity<Menu> entity = restTemplate.exchange(
-                "http://localhost:8002/menu/{menuId}",
+                "http://localhost:8002/menu/{restaurantId}",
                 HttpMethod.GET,
                 null,
                 Menu.class,
-                menuId);
+                restaurantId);
         return entity.getBody();
     }
 

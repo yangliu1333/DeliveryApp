@@ -9,14 +9,10 @@ import java.util.Map;
 @Data
 public class Menu {
 
-    private Map<Integer, List<Dish>> foodOptions;
-
-    private List<Dish> drinkList;
-
+    private List<Dish> dishes;
     private Long id;
-
-    private String timeOfDay;
-
+    private Long restaurantId;
     private Date date;
+    private Time timeOfDay;
 
 }

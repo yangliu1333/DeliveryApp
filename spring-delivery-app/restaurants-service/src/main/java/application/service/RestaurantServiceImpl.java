@@ -32,7 +32,7 @@ public class RestaurantServiceImpl implements RestaurantService {
     @Override
     public Restaurant getRestaurantById(Long restaurantId) {
         Restaurant restaurant = repository.findOne(restaurantId);
-        restaurant.setCurrentMenu(client.getMenu(restaurant.getMenuId()));
+        restaurant.setCurrentMenu(client.getLatestMenu(restaurant.getId()));
         return restaurant;
     }
 

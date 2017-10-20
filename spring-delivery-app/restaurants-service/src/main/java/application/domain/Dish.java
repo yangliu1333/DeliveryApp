@@ -6,6 +6,6 @@ import lombok.Data;
 public class Dish {
 
     private Long id;
-
     private String name;
+    private DishType dishType;
 }
