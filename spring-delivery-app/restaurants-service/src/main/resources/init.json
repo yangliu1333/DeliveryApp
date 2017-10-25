@@ -1,0 +1,17 @@
+[
+  {
+    "name": "sichuan goumet",
+    "description": "testing",
+    "rating": 4.3,
+    "status": "CLOSE",
+    "address": "Murray Ave"
+  },
+  {
+    "name": "itea cafe",
+    "description": "testing",
+    "rating": 4.6,
+    "status": "CLOSE",
+    "address": "Murray Ave da"
+  }
+
+]

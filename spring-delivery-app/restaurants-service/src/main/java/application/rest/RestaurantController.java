@@ -1,6 +1,7 @@
 package application.rest;
 
 import application.domain.Restaurant;
+import application.repository.MenuRedisRepository;
 import application.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -26,6 +27,9 @@ public class RestaurantController {
 
     @Autowired
     private RestaurantService service;
+
+    @Autowired
+    private MenuRedisRepository redisRepository;
 
     //for developers to upload restaurants in batch
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
@@ -53,9 +57,14 @@ public class RestaurantController {
         return service.getRestaurantById(restaurantId);
     }
 
-    @RequestMapping(value = "delete/{restaurantId}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/delete/{restaurantId}", method = RequestMethod.DELETE)
     public void deleteRestaurant(@PathVariable("restaurantId") Long restaurantId) {
         service.deleteRestaurant(restaurantId);
+    }
+
+    @RequestMapping(value = "/cache/purge", method = RequestMethod.GET)
+    public void purgeCache() {
+        redisRepository.purge();
     }
 
 }

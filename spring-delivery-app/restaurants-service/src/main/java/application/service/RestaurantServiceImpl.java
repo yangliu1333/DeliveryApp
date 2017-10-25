@@ -1,7 +1,9 @@
 package application.service;
 
 import application.clients.MenuServiceClient;
+import application.domain.Menu;
 import application.domain.Restaurant;
+import application.repository.MenuRedisRepository;
 import application.repository.RestaurantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -14,35 +16,37 @@ import java.util.List;
 public class RestaurantServiceImpl implements RestaurantService {
 
     @Autowired
-    private RestaurantRepository repository;
+    private RestaurantRepository restaurantRepository;
 
     @Autowired
     private MenuServiceClient client;
 
     @Override
     public void upload(List<Restaurant> restaurantList) {
-        repository.save(restaurantList);
+        restaurantRepository.save(restaurantList);
     }
 
     @Override
     public Page<Restaurant> displayAll(Pageable pageable) {
-        return repository.findAll(pageable);
+        return restaurantRepository.findAll(pageable);
     }
 
     @Override
     public Restaurant getRestaurantById(Long restaurantId) {
-        Restaurant restaurant = repository.findOne(restaurantId);
-        restaurant.setCurrentMenu(client.getLatestMenu(restaurant.getId()));
+        Restaurant restaurant = restaurantRepository.findOne(restaurantId);
+        if (restaurant != null) {
+            restaurant.setCurrentMenu(client.getLatestMenu(restaurantId));
+        }
         return restaurant;
     }
 
     @Override
     public void createRestaurant(Restaurant restaurant) {
-        repository.save(restaurant);
+        restaurantRepository.save(restaurant);
     }
 
     @Override
     public void deleteRestaurant(Long restaurantId) {
-        repository.delete(restaurantId);
+        restaurantRepository.delete(restaurantId);
     }
 }

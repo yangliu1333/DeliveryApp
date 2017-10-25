@@ -32,18 +32,13 @@ public class MenuRestController {
     @RequestMapping(value = "/menu/upload", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.CREATED)
     public void upload(@RequestBody List<Menu> menus) {
-        service.saveMenus(menus);
+        service.saveMenusBulk(menus);
     }
 
     @RequestMapping(value = "/menu",method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.CREATED)
     public void create(@RequestBody Menu menu) {
-        try {
-            mapper.writeValue(System.out, menu);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        service.updateMenu(menu);
+        service.saveMenu(menu);
     }
 
     @RequestMapping(value = "/menu/{restaurantId}/latest", method = RequestMethod.GET)
@@ -56,7 +51,11 @@ public class MenuRestController {
     public Page<Menu> getHistoryMenus(@PathVariable("restaurantId") Long restaurantId,
                                       @RequestParam(name = "page", required = false, defaultValue = DEFAULT_PAGE) int page,
                                       @RequestParam(name = "size", required = false, defaultValue = DEFAULT_SIZE) int size) {
-        System.out.println(restaurantId);
         return service.getHistoryMenuByRestaurant(restaurantId, new PageRequest(page, size));
+    }
+
+    @RequestMapping(value = "menus/{menuId}", method = RequestMethod.GET)
+    public Menu getMenu(@PathVariable("menuId") Long menuId) {
+        return service.getMenu(menuId);
     }
 }

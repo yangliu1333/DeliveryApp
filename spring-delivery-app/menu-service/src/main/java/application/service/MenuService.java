@@ -8,11 +8,13 @@ import java.util.List;
 
 public interface MenuService {
 
-    void updateMenu(Menu menu);
+    void saveMenu(Menu menu);
 
-    void saveMenus(List<Menu> menus);
+    void saveMenusBulk(List<Menu> menus);
 
     Menu getLatestMenu(Long restaurantId);
 
     Page<Menu> getHistoryMenuByRestaurant(Long restaurantId, Pageable pageable);
+
+    Menu getMenu(Long menuId);
 }

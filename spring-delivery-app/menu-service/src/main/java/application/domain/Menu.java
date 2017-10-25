@@ -1,5 +1,7 @@
 package application.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import lombok.Data;
 import lombok.Setter;
 
@@ -15,6 +17,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -30,6 +33,9 @@ public class Menu {
     private Date date;
     private Time timeOfDay;
 
+    @Transient
+    private Boolean setCurrentMenu;
+
     @ManyToMany(targetEntity = Dish.class, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
             name="T_MENU_DISH",
@@ -43,6 +49,11 @@ public class Menu {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {
         return id;
+    }
+
+    @JsonIgnore
+    public Boolean getSetCurrentMenu() {
+        return setCurrentMenu;
     }
 
     public Menu() {}

@@ -1,0 +1,14 @@
+redis:
+  image: redis:alpine
+  ports:
+    - "6379:6379"
+#kafkaserver:
+#  image: spotify/kafka
+#  ports:
+#    - "2181:2181"
+#    - "9092:9092"
+rabbitmq:
+  image: rabbitmq:3.6.1-management
+  ports:
+    - "5672:5672"
+    - "15672:15672"

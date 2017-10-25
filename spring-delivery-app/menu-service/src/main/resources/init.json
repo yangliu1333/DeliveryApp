@@ -1,28 +1,13 @@
-[
-  {
-    "dishes": [
-      {
-        "id": 1,
-        "name": "beef",
-        "dishType": "FOOD"
-      }
-    ],
-    "id": 1,
-    "restaurantId": 14914791,
-    "date": 1491072635000,
-    "timeOfDay": "MORNING"
-  },
-  {
-    "dishes": [
-      {
-        "id": 2,
-        "name": "chicken",
-        "dishType": "FOOD"
-      }
-    ],
-    "id": 2,
-    "restaurantId": 14914791,
-    "date": 1491072695000,
-    "timeOfDay": "LUNCH"
-  }
-]
+
+{
+  "dishes": [
+    {
+      "name": "beef stew soup",
+      "dishType": "FOOD"
+    }
+  ],
+  "restaurantId": 1,
+  "date": 1491072635000,
+  "timeOfDay": "MORNING",
+  "setCurrentMenu": true
+}

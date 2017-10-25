@@ -31,9 +31,6 @@ public class Restaurant {
     @Column(name = "rating")
     private double rating;
 
-    @Column(name = "menu_id")
-    private String menuId;
-
     @Transient
     private Menu currentMenu;
 

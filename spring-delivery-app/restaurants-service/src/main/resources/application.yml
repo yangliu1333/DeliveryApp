@@ -1,2 +1,18 @@
 server:
   port: 8001
+spring:
+  redis:
+    host: localhost
+    port: 6379
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: menu
+#          destination: menuChangeTopic
+#          content-type: application/json
+#          group: restaurantsServiceGroup
+#      kafka:
+#        binder:
+#          zkNodes: localhost
+#          brokers: localhost

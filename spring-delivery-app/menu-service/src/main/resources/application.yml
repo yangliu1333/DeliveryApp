@@ -11,3 +11,13 @@ spring:
     username: sa
     password:
     driver-class-name: org.h2.Driver
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: menu
+
+#      kafka:
+#        binder:
+#          zkNodes: localhost
+#          brokers: localhost
