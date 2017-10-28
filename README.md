@@ -1,10 +1,10 @@
 # Delivery Web App
 
-## How to run web interface
+<!-- ## How to run web interface
 * install maven that suits your platform
 * `cd DeliveryApp/spring-delivery-app/web-app`
 * `mvn clean spring-boot:run`
-
+ -->
 ## Functionality
 
 #### User:
@@ -21,14 +21,37 @@
 * Pickup verification: delivery personnel will scan the QR code of users picking up the meals and verify order information.
 * Track extra meals: when extra meals were picked up, the amount of extra meals prepared will be reduced. The delivery personnel will be alerted when no extra meals were available for users haven't ordered.
 
+## Avalable Services APIs
+#### Restaurant Service
+1. list restaurants with their basic information
+2. get a restaurant detailed infomation including its menu
+3. bulk upload restaurants (for testing)
+4. delete a restaurant
 
+#### Menu Service:
+1. upload a menu with existing dishes or newly-defined dishes and they have the option to set this menu as the current menu or not. If it's set to current menu, restaurant service will call menu service to get the latest menu
+2. set a historical menu to be the current menu
+3. list historical menus with restaurant id
+4. delete a menu with their id
+5. builk upload menus (for testing)
 
+## Pending Services
+#### Config Service
+* use git repository to store all config file
+* available for other service to query configuration\
+
+#### Eureka Server
+* Service registration and discovery
+
+#### Auth Service
+* use OAuth2 for authentication and authorization
+* define available resources for each type of user
 
 ## Architecture
 
 ### Technology stack
-* Frontend stack: J2EE Servelet, JSP, Bootstrap
-* Backend stack: Spring Boot, Spring Cloud, Spring Data, Rabbit MQ (or other AMQP), MySQL (or other RDBMS), MongoDB (or other NoSQL), Docker, and Redis.
+* Frontend stack: Spring MVC, JSP/thymleaf, Bootstrap/Matirialize.
+* Backend stack: Spring Boot, Spring Cloud, Spring Data, Rabbit MQ (or Kafka), MySQL (or other RDBMS), MongoDB (or other NoSQL), Docker, and Redis.
 
 - Spring Boot will be served as stand-alone REST microservice.
 - Spring Cloud will be used for registration and discovery for REST microservices.
@@ -44,10 +67,10 @@
 
 ## Members
 
-* Zhiyuan Zhang (front-end)
-* Leo Liu (back-end)
-* Young Liu (back-end)
-* Shaoqian Yang (back-end)
+* Leo Liu 
+* Lidi Zheng 
+* Young Liu 
+* Shaoqian Yang 
 
 ## References
 
