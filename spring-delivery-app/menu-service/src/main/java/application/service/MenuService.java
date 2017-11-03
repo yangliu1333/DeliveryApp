@@ -1,5 +1,6 @@
 package application.service;
 
+import application.domain.Dish;
 import application.domain.Menu;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,4 +18,8 @@ public interface MenuService {
     Page<Menu> getHistoryMenuByRestaurant(Long restaurantId, Pageable pageable);
 
     Menu getMenu(Long menuId);
+
+    void deleteMenu(Long menuId);
+
+    Page<Dish> getDishes(Long restaurantId, Pageable pageable);
 }

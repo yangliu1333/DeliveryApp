@@ -23,6 +23,7 @@ public class Dish {
     private Long id;
     private String name;
     private DishType dishType;
+    private Long restaurantId;
 
     @ManyToMany(mappedBy = "dishes", cascade = CascadeType.ALL)
     public List<Menu> getMenus() {

@@ -1,13 +1,58 @@
-
-{
-  "dishes": [
-    {
-      "name": "beef stew soup",
-      "dishType": "FOOD"
-    }
-  ],
-  "restaurantId": 1,
-  "date": 1491072635000,
-  "timeOfDay": "MORNING",
-  "setCurrentMenu": true
-}
+[
+  {
+    "dishes": [
+      {
+        "name": "beef stew soup",
+        "dishType": "FOOD",
+        "restaurantId": 1
+      },
+      {
+        "name": "fried chicken",
+        "dishType": "FOOD",
+        "restaurantId": 1
+      },
+      {
+        "name": "green bean soup",
+        "dishType": "DRINK",
+        "restaurantId": 1
+      },
+      {
+        "name": "black milk tea",
+        "dishType": "DRINK",
+        "restaurantId": 1
+      }
+    ],
+    "restaurantId": 1,
+    "date": 1491072635000,
+    "timeOfDay": "MORNING",
+    "setCurrentMenu": true
+  },
+  {
+    "dishes": [
+      {
+        "name": "basil chicken",
+        "dishType": "FOOD",
+        "restaurantId": 1
+      },
+      {
+        "name": "bok choy",
+        "dishType": "FOOD",
+        "restaurantId": 1
+      },
+      {
+        "name": "green bean soup",
+        "dishType": "DRINK",
+        "restaurantId": 1
+      },
+      {
+        "name": "black milk tea",
+        "dishType": "DRINK",
+        "restaurantId": 1
+      }
+    ],
+    "restaurantId": 1,
+    "date": 1491072635000,
+    "timeOfDay": "LUNCH",
+    "setCurrentMenu": false
+  }
+]

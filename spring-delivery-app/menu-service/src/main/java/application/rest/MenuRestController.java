@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
 import java.util.List;
 
+@RequestMapping(value = "/menu")
 @RestController
 public class MenuRestController {
 
@@ -27,35 +28,40 @@ public class MenuRestController {
     @Autowired
     private MenuService service;
 
-    private ObjectMapper mapper = new ObjectMapper();
-
-    @RequestMapping(value = "/menu/upload", method = RequestMethod.POST)
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.CREATED)
     public void upload(@RequestBody List<Menu> menus) {
         service.saveMenusBulk(menus);
     }
 
-    @RequestMapping(value = "/menu",method = RequestMethod.POST)
+    @RequestMapping(value = "/bulk",method = RequestMethod.POST)
     @ResponseStatus(value = HttpStatus.CREATED)
     public void create(@RequestBody Menu menu) {
         service.saveMenu(menu);
     }
 
-    @RequestMapping(value = "/menu/{restaurantId}/latest", method = RequestMethod.GET)
+    @RequestMapping(value = "/latest", method = RequestMethod.GET)
     public Menu getLatest(@PathVariable("restaurantId") String restaurantId) {
         System.out.println(restaurantId);
         return service.getLatestMenu(Long.parseLong(restaurantId));
     }
 
-    @RequestMapping(value = "/menu/{restaurantId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/restaurant/{restaurantId}", method = RequestMethod.GET)
     public Page<Menu> getHistoryMenus(@PathVariable("restaurantId") Long restaurantId,
                                       @RequestParam(name = "page", required = false, defaultValue = DEFAULT_PAGE) int page,
                                       @RequestParam(name = "size", required = false, defaultValue = DEFAULT_SIZE) int size) {
         return service.getHistoryMenuByRestaurant(restaurantId, new PageRequest(page, size));
     }
 
-    @RequestMapping(value = "menus/{menuId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{menuId}", method = RequestMethod.GET)
     public Menu getMenu(@PathVariable("menuId") Long menuId) {
         return service.getMenu(menuId);
     }
+
+    @RequestMapping(value = "/{menuId}", method = RequestMethod.DELETE)
+    public void deleteMenu(@PathVariable("menuId") Long menuId) {
+        service.deleteMenu(menuId);
+    }
+
+
 }
