@@ -1,11 +1,11 @@
-#### User:
+## User:
 * Place orders: users can see the menus posted by restaurants and order meals. 
 * Manage orders: users can cancel orders or change quantities(based on availability). 
 * Track delivery status: users can track the time when driver leaves for campus, the estimated arrival time, length of stay, and time of leaving.
 * See amount of extra meals: users can check the amount of extra meals prepared by restaurants that were not picked-up.
 * Reputation rating system: to prevent the abuse of the system, only users with a qualified reputation level can place orders(pending).
 
-#### Restaurant:
+## Restaurant:
 * Post daily menus: restaurants can post and update the dishes offered on a given day and the amount of meals offered.
 * Take orders: restaurants can keep track of the total amount of orders placed, cancelled, and picked up.
 * Update activities: restaurants can post the location information, expected arriving time, and expected leaving time.

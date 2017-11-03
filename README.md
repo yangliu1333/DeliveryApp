@@ -6,6 +6,7 @@
 
 * [Requirement Analysis Document]: https://github.com/benjasy1993/DeliveryApp/blob/master/docs/RequirementDoc.md
 
+* [APIs Document]: https://github.com/benjasy1993/DeliveryApp/blob/master/docs/APIDoc.md
 
 ## Architecture
 
