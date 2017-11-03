@@ -4,9 +4,9 @@
 
 * The project aims to make it easy for CMU Chinese students to order delivery using a web interface or mobile platform instead of using WeChat group. 
 
-* [Requirement Analysis Document]: https://github.com/benjasy1993/DeliveryApp/blob/master/docs/RequirementDoc.md
+* [Requirement Analysis Document](https://github.com/benjasy1993/DeliveryApp/blob/master/docs/RequirementDoc.md)
 
-* [APIs Document]: https://github.com/benjasy1993/DeliveryApp/blob/master/docs/APIDoc.md
+* [APIs Document](https://github.com/benjasy1993/DeliveryApp/blob/master/docs/APIDoc.md) 
 
 ## Architecture
 
