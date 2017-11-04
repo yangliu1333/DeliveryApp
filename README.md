@@ -4,7 +4,7 @@
 
 * The project aims to make it easy for CMU Chinese students to order delivery using a web interface or mobile platform instead of using WeChat group. 
 
-* [Requirement Analysis Document](https://github.com/benjasy1993/DeliveryApp/blob/master/docs/RequirementDoc.md)
+* [Product Requirement Document](https://github.com/benjasy1993/DeliveryApp/blob/master/docs/RequirementDoc.md)
 
 * [APIs Document](https://github.com/benjasy1993/DeliveryApp/blob/master/docs/APIDoc.md) 
 
@@ -25,7 +25,7 @@
 #### Architecture diagram
 ![diagram](https://github.com/benjasy1993/DeliveryApp/blob/master/images/diagram.jpg "Architecture Diagram")
 
-## ProjectMembers
+## Project Members
 
 * Joy Zhang: Product Manager
 * Leo Liu: User module, Customer module

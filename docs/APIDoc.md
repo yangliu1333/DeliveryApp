@@ -11,7 +11,7 @@
 2. set a historical menu to be the current menu
 3. list historical menus with restaurant id
 4. delete a menu with their id
-5. builk upload menus (for testing)
+5. bulk upload menus (for testing)
 
 ## Pending Services
 
